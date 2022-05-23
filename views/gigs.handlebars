@@ -1,0 +1,18 @@
+<section id="gigs" class="container">
+    <h1 style="text-align:center;"> Gigs template</h1>
+        {{#each gigs}}
+        <div class="card" style="margin-bottom: 20px; width: 18rem;">
+            <div class="card-header">
+                 <h3>{{title}} </h3>
+            </div>
+            <ul class="list-group list-group-flush">
+                <p> <strong> Description:</strong> {{description}}</p>
+                <p> <strong> Technologies:</strong>  {{technologies}}</p>
+                <p><strong> Contact:</strong>  {{contact_email}}</p>
+            </ul>
+        </div>
+
+        {{else}}
+            <p> No gigs available </p>
+        {{/each}}
+</section>

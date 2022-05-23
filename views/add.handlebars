@@ -1,0 +1,43 @@
+<div class="container" style="text-align: center;">
+    <h1>Add</h1>
+    <p> Your contact will be registered users if they apply for a gig. </p>
+    {{#each errors}}
+    <div class="alert alert-danger" role="alert">
+        <p> {{text}}</p>
+    </div>
+    {{/each}}
+</div>
+
+<div class="container">
+    <form action="/gigs/add" method="POST">
+        <div class="form-group">
+            <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg" style="margin-bottom: -5px;
+    margin-bottom: 0px">Gig Title</label>
+            <div class="col-sm-10">
+            <input name="title" type="text" class="form-control form-control-lg" id="colFormLabelLg" placeholder="Add the name of the gig" value={{title}}>
+            </div>
+        </div>
+         <div class="form-group">
+            <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg" style="margin-bottom: -5px;
+    margin-bottom: 0px">Gig Description</label>
+            <div class="col-sm-10">
+            <input name="description" type="text" class="form-control form-control-lg" id="colFormLabelLg" placeholder="300K, full benefits, unlimited PTO" value={{description}}>
+            </div>
+        </div>
+               <div class="form-group">
+            <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg" style="margin-bottom: -5px;
+    margin-bottom: 0px">Technologies</label>
+            <div class="col-sm-10">
+            <input name="technologies" type="text" class="form-control form-control-lg" id="colFormLabelLg" placeholder="SQL, Bootstrap, Express, Javascript" value={{technologies}}>
+            </div>
+        </div>
+           <div class="form-group">
+            <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg" style="margin-bottom: -5px;
+    margin-bottom: 0px">Email</label>
+            <div class="col-sm-10">
+            <input name="contact_email" type="email" class="form-control form-control-lg" id="colFormLabelLg" placeholder="user123@gmail.com" value={{contact_email}}>
+            </div>
+        </div>
+        <button type="submit" value="Add Gig" class="btn btn-primary">Submit</button>
+</form>
+</div>
