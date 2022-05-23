@@ -1,7 +1,8 @@
 <section id="gigs" class="container">
-    <h1 style="text-align:center;"> Gigs template</h1>
+    <h1 style="text-align:center;"> Gigs</h1>
+    <div class="row">
         {{#each gigs}}
-        <div class="card" style="margin-bottom: 20px; width: 18rem;">
+        <div class="card" style="margin-bottom: 20px; width: 18rem; margin-right: 5px; margin-left: 5px">
             <div class="card-header">
                  <h3>{{title}} </h3>
             </div>
@@ -15,4 +16,5 @@
         {{else}}
             <p> No gigs available </p>
         {{/each}}
+    </div>
 </section>
